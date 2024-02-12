@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ozan-cakar-deployment
+  name: ozan-cakar
 spec:
   replicas: 3
   selector:
