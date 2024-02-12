@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: ozan-cakar-container
-        image: your-docker-image:tag
+        image: ozanncakar/devops:v1
         ports:
         - containerPort: 80
