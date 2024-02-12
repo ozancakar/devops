@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ozan-cakar-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ozan-cakar
+  template:
+    metadata:
+      labels:
+        app: ozan-cakar
+    spec:
+      containers:
+      - name: ozan-cakar-container
+        image: your-docker-image:tag
+        ports:
+        - containerPort: 80
