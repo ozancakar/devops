@@ -12,9 +12,10 @@ spec:
       labels:
         app: ozan-cakar
     spec:
+      serviceAccountName: default
       containers:
       - name: ozan-cakar-container
         image: ozanncakar/devops:v1
         ports:
         - containerPort: 80
-# tested text
+  targetNamespace: default
