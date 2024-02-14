@@ -15,6 +15,6 @@ spec:
       serviceAccountName: default
       containers:
       - name: ozan-cakar-container
-        image: ozanncakar/devops:v1
+        image: ozanncakar/devops:v2
         ports:
         - containerPort: 80
