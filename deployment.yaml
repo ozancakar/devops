@@ -17,4 +17,4 @@ spec:
       - name: ozan-cakar-container
         image: ozanncakar/devops:v2
         ports:
-        - containerPort: 4000
+        - containerPort: 5000
