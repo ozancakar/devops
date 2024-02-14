@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: ozanncakar/devops:v2  # Docker imajınızın adı ve sürümü
+        image: ozanncakar/devops:v1  # Docker imajınızın adı ve sürümü
         ports:
         - containerPort: 4000  # Flask uygulamasının çalıştığı port
 ---
