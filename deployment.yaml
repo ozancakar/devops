@@ -17,17 +17,4 @@ spec:
         image: ozanncakar/devops:v2  # Docker imajınızın adı ve sürümü
         ports:
         - containerPort: 4000  # Flask uygulamasının çalıştığı port
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: flask-app-service
-spec:
-  selector:
-    app: flask-app
-  ports:
-    - protocol: TCP
-      port: 4000
-      targetPort: 4000  # Flask uygulamasının çalıştığı port
-  type: LoadBalancer  # LoadBalancer veya NodePort kullanabilirsiniz, ihtiyacınıza göre ayarlayın
 
