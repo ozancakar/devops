@@ -1,20 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ozan-cakar-deployment
+  name: flask-app-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: ozan-cakar
+      app: flask-app
   template:
     metadata:
       labels:
-        app: ozan-cakar
+        app: flask-app
     spec:
-      serviceAccountName: default
       containers:
-      - name: ozan-cakar-container
-        image: ozanncakar/devops:v2
+      - name: flask-app
+        image: ozanncakar/devops:v1  # Docker imajınızın adı ve sürümü
         ports:
-        - containerPort: 5000
+        - containerPort: 4000  # Flask uygulamasının çalıştığı port
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-app-service
+spec:
+  selector:
+    app: flask-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 4000  # Flask uygulamasının çalıştığı port
+  type: LoadBalancer  # LoadBalancer veya NodePort kullanabilirsiniz, ihtiyacınıza göre ayarlayın
+
