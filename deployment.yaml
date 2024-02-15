@@ -17,5 +17,3 @@ spec:
       containers:
       - name: hesap-makinesi
         image: ozanncakar/hesapmakinesi:v1
-        ports:
-        - containerPort: 80
