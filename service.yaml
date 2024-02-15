@@ -7,6 +7,6 @@ spec:
     app: hesap-makinesi
   ports:
     - protocol: TCP
-      port: 8080
-      nodePort: 31060
+      port: 80
+      nodePort: 5000
   type: NodePort
