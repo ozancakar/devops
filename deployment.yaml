@@ -1,21 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hesap-makinesi-deployment
-  labels:
-    app: hesap-makinesi
+  name: nginx-project
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
-      app: hesap-makinesi
+      app: nginx-project
   template:
     metadata:
       labels:
-        app: hesap-makinesi
+        app: nginx-project
     spec:
       containers:
-      - name: hesap-makinesi
-        image: ozanncakar/hesap-makinesi:v1
-        ports:
-        - containerPort: 80
+        - name: nginx
+          image: nginx:1.17.3
+          ports:
+            - containerPort: 80
