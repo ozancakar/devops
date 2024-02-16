@@ -15,3 +15,5 @@ COPY . .
 
 # Flask uygulamasını çalıştır
 CMD ["python", "app.py"]
+
+EXPOSE 80
