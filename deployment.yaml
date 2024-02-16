@@ -18,4 +18,4 @@ spec:
       - name: hesap-makinesi
         image: ozanncakar/hesap-makinesi:v1
         ports:
-        - containerPort: 443
+        - containerPort: 80
